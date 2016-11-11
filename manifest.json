@@ -1,9 +1,9 @@
 {
-  "name": "Dear Donald",
+  "name": "Dear Donaldry",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "Appending Dear Diary to @realDonaldTrump twitters",
-  "homepage_url": "twitter.com/carl_talks",
+  "homepage_url": "http://twitter.com/carl_talks",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -15,16 +15,16 @@
     "persistent": true
   },
   "permissions": [
-    "http://twitter.com/realDonaldTrump/*",
-    "https://twitter.com/realDonaldTrump/*",
-    ""
+      "https://*/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://twitter.com/*",
+        "http://twitter.com/*"
       ],
-      "js": [
+      "js": [ 
+        "js/jquery/jquery.min.js",
         "src/inject/inject.js"
       ]
     }

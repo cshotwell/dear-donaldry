@@ -6,7 +6,9 @@ chrome.extension.sendMessage({}, function(response) {
 		// ----------------------------------------------------------
 		// This part of the script triggers when page is done loading
 		// ----------------------------------------------------------
-        $(".tweet p").prepend("Dear Diary, ");
+        setInterval(function() { $('.tweet[data-screen-name="realDonaldTrump"] p:not([data-dear-diary])')
+          .prepend('Dear Diary, ')
+          .attr('data-dear-diary', 'true'); }, 4);
 
 	}
 	}, 10);
